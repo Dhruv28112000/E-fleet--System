@@ -1,0 +1,1397 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication2.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 3 | Dashboard</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bbootstrap 4 -->
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+
+    <form id="form1" runat="server">
+        <div class="wrapper">
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+   <h3>
+     D-Trans Online Fleet System
+   
+   </h3>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="#" class="brand-link">
+  
+      <span class="brand-text font-weight-light">D-trans</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Admin</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item">
+            <a href="Home.aspx" class="nav-link active">
+              
+              <p>
+                Home
+              </p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link ">
+              <p>
+                MIS
+              <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                       
+                        <p>
+                            VendorMasterRecord
+               
+                        </p>
+                        <i class="right fas fa-angle-left"></i>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="Misentry(1).aspx" class="nav-link ">
+                                <p>NewEntry</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Misentry(2).aspx" class="nav-link">
+                                <p>UpdateRecord</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <p>PrintRecord</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <p>All vehicles Info</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <p>All drivver info</p>
+                </a>
+              </li>
+               <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <p>View driver trip info</p>
+                </a>
+              </li>
+               <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <p>VehicleopenclosingKnrecord</p>
+                </a>
+              </li>
+               <li class="nav-item">
+                <a href="Misdue.aspx" class="nav-link">
+                  <p>Due</p>
+                </a>
+              </li>
+              
+               <li class="nav-item">
+                <a href="#" class="nav-link">
+             
+                  <p>Tyre</p>
+                </a>
+              </li>
+              
+               <li class="nav-item">
+                <a href="#" class="nav-link">
+        
+                  <p>Repairs</p>
+                </a>
+              </li>
+              
+               <li class="nav-item">
+                <a href="#" class="nav-link">
+
+                  <p>Trip</p>
+                </a>
+              </li>
+              
+               <li class="nav-item">
+                <a href="#" class="nav-link">
+               
+                  <p>Other</p>
+                </a>
+              </li>
+              
+               <li class="nav-item">
+                <a href="#" class="nav-link">
+             
+                  <p>Salary</p>
+                </a>
+              </li>
+              
+               <li class="nav-item">
+                <a href="DriverSettlement.aspx" class="nav-link">
+                 
+                  <p>MonthWiseDriverSettlement</p>
+                </a>
+              </li>
+              
+               <li class="nav-item">
+
+               <li class="nav-item has-treeview">
+                  <a href="#" class="nav-link">
+              <p>
+                ChangeStatus
+              </p>
+              <i class="right fas fa-angle-left"></i>
+            </a>
+            <ul class="nav nav-treeview">
+              
+              <li class="nav-item">
+                <a href="ChangeStatus(1).aspx" class="nav-link">
+                
+                  <p>ChangeMatownStatus</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="ChangeStatus(2).aspx"" class="nav-link">
+                
+                  <p>ChangeDieselCardStatus</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="ChangeStatus(3).aspx"" class="nav-link">
+                
+                  <p>ChangeFastagStatus</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="ChangeStatus(4).aspx"" class="nav-link">
+                
+                  <p>ChangeDriverAdvanceStatus</p>
+                </a>
+              </li>
+              
+              
+              </ul>
+                 </li>
+              </li>
+              
+               <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <p>PathakSir</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+        
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <p>
+                HP
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+<a href="#" class="nav-link">                
+                  <p>PurchaseEntry</p>
+                </a>
+              </li>
+              <li class="nav-item">
+<a href="#" class="nav-link">                 
+                  <p>FindUpRecordDetails</p>
+                </a>
+              </li>
+              <li class="nav-item">
+<a href="#" class="nav-link">                  
+                  <p>UpdateHpRecord</p>
+                </a>
+              </li>
+              <li class="nav-item">
+<a href="#" class="nav-link">                  
+                  <p>DownloadHpDocument</p>
+                </a>
+              </li>
+              <li class="nav-item">
+<a href="#" class="nav-link">               
+                  <p>DownloadHpRecordData</p>
+                </a>
+              </li>
+            
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <p>
+                Vehicle
+              </p>
+              <i class="right fas fa-angle-left"></i>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="Vehicle_entry.aspx" class="nav-link">
+                  
+                  <p>Entry</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="VehicleRouteBlind.aspx" class="nav-link">
+                  
+                  <p>VehicleRouteBlind</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="VehicleReleaseRoute.aspx" class="nav-link">
+                 
+                  <p>ReleaseRoute</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="VehicleUploadImage.aspx" class="nav-link">
+                  
+                  <p>UploadVehicleImage</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="VehicleUploadDoc.aspx" class="nav-link">
+                  
+                  <p>UploadVehicleDocument</p>
+                </a>
+              </li>
+            
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                 
+                  <p>DownloadVehicleDocument</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  
+                  <p>DownloadVehicleDueDocument</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  
+                  <p>UpdateVehicleInformation</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                 
+                  <p>DeleteVehicleRecord</p>
+                </a>
+              </li>
+              <li class="nav-item">
+
+               <li class="nav-item has-treeview">
+                  <a href="#" class="nav-link">
+              <p>
+                VehicleSold
+              </p>
+              <i class="right fas fa-angle-left"></i>
+            </a>
+            <ul class="nav nav-treeview">
+              
+              <li class="nav-item">
+                <a href="VehicleSoldEntry.aspx" class="nav-link">
+                
+                  <p>VehicleSoldEntry</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                
+                  <p>UpdateSoldEntry</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                
+                  <p>DeleteSoldEntry</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                
+                  <p>PrintSoldEntry</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                
+                  <p>Download Vehicle Sold Document</p>
+                </a>
+              </li>
+              </ul>
+                 </li>
+              </li>
+
+              
+              <li class="nav-item">
+                <a href="VehicleCardIssueMaster.aspx" class="nav-link">
+                  
+                  <p>VehicleCardIssueMaster</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="VehicleInspection.aspx" class="nav-link">
+                 
+                  <p>VehicleInspection</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="VehicleDepcreation.aspx" class="nav-link">
+                 
+                  <p>VehicleDepreciationCalculator</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+
+               <li class="nav-item has-treeview">
+                  <a href="#" class="nav-link">
+              <p>
+                VehicleDueDetails
+              </p>
+              <i class="right fas fa-angle-left"></i>
+            </a>
+            <ul class="nav nav-treeview">
+              
+              <li class="nav-item">
+                <a href="VehicleUploadPermit.aspx" class="nav-link">
+                
+                  <p>VehiclePermitInfo</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="VehicleUploadInsurance.aspx" class="nav-link">
+                
+                  <p>VehicleInsuranceInfo</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="VehicleUploadRCBook.aspx" class="nav-link">
+                
+                  <p>VehicleRCBookInfo</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="VehicleUploadTax.aspx" class="nav-link">
+                
+                  <p>VehicleTaxInfo</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="VehicleUploadFitness.aspx" class="nav-link">
+                
+                  <p>VehicleFitnessInfo</p>
+                </a>
+              </li>
+              </ul>
+                 </li>
+              </li>
+            </ul>
+          </li>
+
+
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <p>
+                Trip
+              </p>
+              <i class="right fas fa-angle-left"></i>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="TripDriverBlind.aspx" class="nav-link">
+                  
+                  <p>DriverBlind</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="TripDriverRelease.aspx" class="nav-link">
+                  
+                  <p>DriverRelease</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                 
+                  <p>TripEntry</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  
+                  <p>UpdateTrip</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  
+                  <p>NewUpdateTrip</p>
+                </a>
+              </li>
+            
+              <li class="nav-item">
+                <a href="TripSettlement.aspx" class="nav-link">
+                 
+                  <p>DeleteTripSettlementEntry</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="TripSettlement(1).aspx" class="nav-link">
+                  
+                  <p>DriverSettlement</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="TripDeleteRecord.aspx" class="nav-link">
+                  
+                  <p>DeleteDriverSettlementRecord</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+
+               <li class="nav-item has-treeview">
+                  <a href="#" class="nav-link">
+              <p>LHPO
+              </p>
+              <i class="right fas fa-angle-left"></i>
+            </a>
+            <ul class="nav nav-treeview">
+              
+              <li class="nav-item">
+                <a href="TripLHPO(1).aspx" class="nav-link">
+                
+                  <p>AddNewLHPOEntry</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="TripLHPO(3).aspx" class="nav-link">
+                
+                  <p>UpdateLHPOEntry</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="TripLHPO(2).aspx" class="nav-link">
+                
+                  <p>DeleteLHPOEntry</p>
+                </a>
+              </li>
+              
+              </ul>
+                 </li>
+              </li>
+              
+              <li class="nav-item">
+
+               <li class="nav-item has-treeview">
+                  <a href="#" class="nav-link">
+              <p>Report
+              </p>
+              <i class="right fas fa-angle-left"></i>
+            </a>
+            <ul class="nav nav-treeview">
+              
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                
+                  <p>VehicleAdvanceAndExpense</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                
+                  <p>AdvanceAndExpenseFullReport</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                
+                  <p>VehicleWiseSettlementReport</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                
+                  <p>AllDriverSettlementReport</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                
+                  <p>SingleDriverSettlementReport</p>
+                </a>
+              </li>
+              </ul>
+                 </li>
+              </li>
+              
+              <li class="nav-item">
+                <a href="TripDriverPayment.aspx" class="nav-link">
+                  
+                  <p>DriverPayment</p>
+                </a>
+              </li>
+              
+              <li class="nav-item has-treeview">
+                  <a href="#" class="nav-link">
+              <p>VehicleOpenCloseKm
+              </p>
+              <i class="right fas fa-angle-left"></i>
+            </a>
+            <ul class="nav nav-treeview">
+              
+              <li class="nav-item">
+<a href="#" class="nav-link">                
+                  <p>NewEntry</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+<a href="#" class="nav-link">                
+                  <p>UpdateEntry</p>
+                </a>
+              </li>
+              
+              </ul>
+                 </li>
+              </ul>
+              </li>
+          
+          
+
+
+
+
+
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <p>
+                Driver
+              </p>
+              <i class="right fas fa-angle-left"></i>
+            </a>
+            <ul class="nav nav-treeview">
+                            <li class="nav-item has-treeview">
+                  <a href="#" class="nav-link">
+              <p>Register
+              </p>
+              <i class="right fas fa-angle-left"></i>
+            </a>
+            <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                <a href="DriverRegister.aspx" class="nav-link">
+                
+                  <p>NewRegistration</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="DriverPersonalDetails.aspx" class="nav-link">
+                
+                  <p>PersonalDetails</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="DriverLicenseDetail.aspx" class="nav-link">
+                
+                  <p>LicenceDetails</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="DriverReference.aspx" class="nav-link">
+                
+                  <p>Refernce</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="DriverAccountDetail.aspx" class="nav-link">
+                
+                  <p>DriverAccountDetails</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="DriverHisab.aspx" class="nav-link">
+                
+                  <p>DriverHisab</p>
+                </a>
+              </li>
+           
+              <li class="nav-item">
+                <a href="DriverSalary.aspx" class="nav-link">
+                
+                  <p>DriverSalary</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="DriverPayroll.aspx" class="nav-link">
+                
+                  <p>Payroll</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="DriverCompanyAction.aspx" class="nav-link">
+                
+                  <p>CompanyAction</p>
+                </a>
+              </li>
+                
+              </ul>
+            
+              <li class="nav-item">
+                <a href="DriverDownload.aspx" class="nav-link">
+                  
+                  <p>DownloadDriverDocument</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  
+                  <p>DownloadApplicationForm</p>
+                </a>
+              </li>
+            
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                 
+                  <p>ShowAllDriverLicenceInfo</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="DriverSalary(1).aspx" class="nav-link">
+                  
+                  <p>DriverSalary</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  
+                  <p>EnterDriverOpenBalance</p>
+                </a>
+              </li>
+              
+              
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  
+                  <p>PrintVoucher</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  
+                  <p>UpdateRecord</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  
+                  <p>DeleteDriver</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="DriverUploadDocument.aspx" class="nav-link">
+                  
+                  <p>UploadDriverDoc</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  
+                  <p>AllDriverMasterRecord</p>
+                </a>
+              </li>
+              <li class="nav-item">
+
+               <li class="nav-item has-treeview">
+                  <a href="#" class="nav-link">
+              <p>AllDriverBlindRecord
+              </p>
+              <i class="right fas fa-angle-left"></i>
+            </a>
+            <ul class="nav nav-treeview">
+              
+              <li class="nav-item">
+                <a href="DriverActiveTrip.aspx" class="nav-link">
+                
+                  <p>DriverActiveTripRecord</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="DriverOffTrip.aspx" class="nav-link">
+                
+                  <p>OffTripRecord</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="Driverblind.aspx" class="nav-link">
+                
+                  <p>Blind/ReleaseRecord</p>
+                </a>
+              </li>
+              
+              </ul>
+                 </li>
+                </ul>
+              </li>
+              
+            
+
+
+
+              
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <p>
+                Tyre
+              </p>
+              <i class="right fas fa-angle-left"></i>
+            </a>
+            <ul class="nav nav-treeview">
+            
+             <li class="nav-item">
+
+               <li class="nav-item has-treeview">
+                  <a href="#" class="nav-link">
+              <p>Purchase
+              </p>
+              <i class="right fas fa-angle-left"></i>
+            </a>
+            <ul class="nav nav-treeview">
+              
+              <li class="nav-item">
+                <a href="TyreEntry.aspx" class="nav-link">
+                
+                  <p>NewEntry</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                
+                  <p>UpdateEntry</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                
+                  <p>DownloadBillCopy</p>
+                </a>
+              </li>
+              
+              </ul>
+                 </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  
+                  <p>Update Tyre Entry Record</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="TyreIssue.aspx" class="nav-link">
+                  
+                  <p>Issue</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="TyreRemoval.aspx" class="nav-link">
+                 
+                  <p>TyreRemoval</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="TyreScrapProceeds.aspx" class="nav-link">
+                  
+                  <p>ScrapProcceds</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  
+                  <p>RemouldProcess</p>
+                </a>
+              </li>
+            
+               <li class="nav-item has-treeview">
+                  <a href="#" class="nav-link">
+              <p>Report
+              </p>
+              <i class="right fas fa-angle-left"></i>
+            </a>
+            <ul class="nav nav-treeview">
+              
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                
+                  <p>AllPurchase</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                
+                  <p>TyreNoReport</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                
+                  <p>AllTyreInfoReport</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                
+                  <p>TyreScrap</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                
+                  <p>TyreMould</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                
+                  <p>OnVehicleTyreRecord</p>
+                </a>
+              </li>
+              </ul>
+                 </li>
+               </ul>
+              </li>
+       
+
+
+
+
+            
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <p>
+                Repair
+              </p>
+              <i class="right fas fa-angle-left"></i>
+            </a>
+            <ul class="nav nav-treeview">
+            
+             <li class="nav-item">
+
+               <li class="nav-item has-treeview">
+                  <a href="#" class="nav-link">
+              <p>AMCContractEntry
+              </p>
+              <i class="right fas fa-angle-left"></i>
+            </a>
+            <ul class="nav nav-treeview">
+              
+              <li class="nav-item">
+                <a href="AMCContract(1).aspx" class="nav-link">
+                
+                  <p>AMCVendorMasterEntry</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="AMCContract(2).aspx" class="nav-link">
+                
+                  <p>AMCContractEntry</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+<a href="#" class="nav-link">                
+                  <p>AMCContractRecord</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+<a href="#" class="nav-link">                
+                  <p>UpdateAMCContractEntry</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+<a href="#" class="nav-link">                
+                  <p>UpdateVendorMaster</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+<a href="#" class="nav-link">                
+                  <p>DownloadAMCDocument</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+<a href="#" class="nav-link">                
+                  <p>DeleteVendorMaster</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+<a href="#" class="nav-link">                
+                  <p>DeleteAMCRecord</p>
+                </a>
+              </li>11
+              </ul>
+                 </li>
+              <li class="nav-item">
+                <a href="RepairJobsheet.aspx" class="nav-link">
+                  
+                  <p>Job Sheet</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="RepairORM.aspx" class="nav-link">
+                  
+                  <p>ORM</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="RepairInward.aspx" class="nav-link">
+                 
+                  <p>RepairInward</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="RepairOutward.aspx" class="nav-link">
+                  
+                  <p>RepairOutward</p>
+                </a>
+              </li>
+              <li class="nav-item">
+<a href="#" class="nav-link">                  
+                  <p>Report</p>
+                </a>
+              </li>
+             </ul>
+                 </li>
+              
+          
+
+
+           <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <p>
+              Battery
+              </p>
+              <i class="right fas fa-angle-left"></i>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="Battery(1).aspx" class="nav-link">
+                  
+                  <p>NewBatteryPurchase</p>
+                </a>
+              </li>
+              </ul>
+             <//li>
+
+              
+           <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <p>
+              UploadData
+              </p>
+              <i class="right fas fa-angle-left"></i>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+<a href="#" class="nav-link">                  
+                  <p>TripUpload</p>
+                </a>
+              </li>
+               <li class="nav-item">
+<a href="#" class="nav-link">                  
+                  <p>FasttagDataUpload</p>
+                </a>
+              </li>
+               <li class="nav-item">
+<a href="#" class="nav-link">                  
+                  <p>DieselOnlineDataUpload</p>
+                </a>
+              </li>
+               <li class="nav-item">
+<a href="#" class="nav-link">                  
+                  <p>UploadDriverAdvance</p>
+                </a>
+              </li>
+              </ul>
+             <//li>
+
+
+              
+           <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <p>
+              Download
+              </p>
+              <i class="right fas fa-angle-left"></i>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+<a href="#" class="nav-link">                  
+                  <p>FixHeadExcelFile</p>
+                </a>
+              </li>
+               <li class="nav-item">
+<a href="#" class="nav-link">                  
+                  <p>NewTripEntry</p>
+                </a>
+              </li>
+               <li class="nav-item">
+<a href="#" class="nav-link">                  
+                  <p>TyreEntry</p>
+                </a>
+              </li>
+               <li class="nav-item">
+<a href="#" class="nav-link">                  
+                  <p>NewEntry</p>
+                </a>
+              </li>
+              </ul>
+             <//li>
+
+
+              
+              
+           <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <p>
+              NewReport
+              </p>
+              <i class="right fas fa-angle-left"></i>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+<a href="#" class="nav-link">                  
+                  <p>SingleDriverSettlementReport</p>
+                </a>
+              </li>
+               <li class="nav-item">
+<a href="#" class="nav-link">                  
+                  <p>AllBatteryPurchaseReport</p>
+                </a>
+              </li>
+               <li class="nav-item">
+<a href="#" class="nav-link">                  
+                  <p>AllVehicleAMCRecordReport</p>
+                </a>
+              </li>
+               <li class="nav-item">
+<a href="#" class="nav-link">                  
+                  <p>AllVehiclTripInfoReport</p>
+                </a>
+              </li>
+               </li>
+               <li class="nav-item">
+<a href="#" class="nav-link">                  
+                  <p>DriverSettlmentTripWiseReport</p>
+                </a>
+              </li>
+              </li>
+               <li class="nav-item">
+<a href="#" class="nav-link">                  
+                  <p>TripSettlementReport</p>
+                </a>
+              </li>
+            </li>
+               <li class="nav-item">
+                   <a href="#" class="nav-link">
+                       <p>VehicleCardIssueMasterRecord</p>
+                   </a>
+               </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <p>DriverMasterRecord</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <p>FindPendingTripSettlementVehicleInfo</p>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                  
+                  <p>FindPendingDriverSettlementReport</p>
+                </a>
+              </li>
+          
+             <li class="nav-item">
+                <a href="#" class="nav-link">
+                  
+                  <p>AllPendingDriverPaymentRecord</p>
+                </a>
+              </li>
+          
+             <li class="nav-item">
+                <a href="#" class="nav-link">
+                  
+                  <p>DriverPaymentRecord</p>
+                </a>
+              </li>
+          
+             <li class="nav-item">
+                <a href="#" class="nav-link">
+                  
+                  <p>DrivertripExpenseRecord</p>
+                </a>
+              </li>
+          
+             <li class="nav-item">
+                <a href="#" class="nav-link">
+                  
+                  <p>UploadMatownData</p>
+                </a>
+              </li>
+          
+             <li class="nav-item">
+                <a href="#" class="nav-link">
+                  
+                  <p>UploadDiselData</p>
+                </a>
+              </li>
+          
+             <li class="nav-item">
+                <a href="#" class="nav-link">
+                  
+                  <p>UploadFastTagData</p>
+                </a>
+              </li>
+
+          
+             <li class="nav-item">
+                <a href="#" class="nav-link">
+                  
+                  <p>UploadDriverAdvance</p>
+                </a>
+              </li>
+          
+             <li class="nav-item">
+                <a href="#" class="nav-link">
+                  
+                  <p>VehicleDueReport</p>
+                </a>
+              </li>
+              </ul>
+            </li>
+        
+
+
+
+        
+           <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <p>
+              AdminMis
+              </p>
+              <i class="right fas fa-angle-left"></i>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  
+                  <p>VehiclePUC</p>
+                </a>
+              </li>
+               <li class="nav-item">
+                <a href="#" class="nav-link">
+                  
+                  <p>DriverImage</p>
+                </a>
+              </li>
+               <li class="nav-item">
+                <a href="#" class="nav-link">
+                  
+                  <p>AdminMis</p>
+                </a>
+              </li>
+               <li class="nav-item">
+                <a href="#" class="nav-link">
+                  
+                  <p>NewEntry</p>
+                </a>
+              </li>
+              </ul>
+             <//li>
+
+        
+        
+           <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <p>
+              Coasting
+              </p>
+              <i class="right fas fa-angle-left"></i>
+            </a>
+            </li>
+
+
+
+
+
+
+
+
+
+
+
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+      
+          </div>
+            <footer class="main-footer">
+    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 3.0.4
+    </div>
+  </footer>
+      
+
+
+
+
+
+      <script src="plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+    $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="dist/js/pages/dashboard.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+
+    </form>
+</body>
+</html>
